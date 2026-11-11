@@ -1,1 +1,94 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nota Müzik Kursu - Hafta 1 İskelet</title>
+    <style>
+            <style> 
+        body { display: flex; flex-direction: column; font-family: sans-serif; margin: 5px; }
+        header { border: 2px solid black; padding: 10px; display: flex; justify-content: space-between; }
+        .hero { border: 2px solid blue; padding: 20px; text-align: center; }
+        .main-layout { display: flex; }
+        .cards-container { display: flex; flex-direction: column; flex: 2; }
+        .card { border: 2px solid orange; padding: 10px; margin-bottom: 10px; }
+        .content-area { border: 2px solid green; padding: 10px; flex: 2; }
+        .sidebar { border: 2px solid purple; padding: 10px; flex: 1; }
+        footer { border: 2px solid red; padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🎵 Nota Müzik Kursu</div>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Kurslarımız</a></li>
+                <li><a href="#">Öğretmenlerimiz</a></li>
+            </ul>
+        </nav>
+    </header>
+     <section class="hero">
+        <h1>Eğlenceli ve Güvenli Müzik Akademisi</h1>
+        <p>7-14 yaş arası çocuklarımız için eğlenceli dersler, velilerimiz için güven veren şeffaf eğitim programları.</p>
+    </section>
+    <main>
+        <section class="cards-section">
+            <div class="card">
+                <h2>👥 Veliler İçin Program & Ücret Bilgisi</h2>
+                <p>Şeffaf eğitim programlarımız ve bütçenize uygun ders seçeneklerimiz.</p>
+                <ul class="price-list">
+                    <li><strong>Bireysel Ders (45 dk):</strong> Aylık 4 ders 2.400 TL</li>
+                    <li><strong>Grup Dersleri (4 Kişi):</strong> Aylık 4 ders 1.400 TL</li>
+                </ul>
+            </div>
+            <div class="card kids">
+                <h2>🎨 Çocuklar İçin Eğlence Dünyası</h2>
+                <p>7-14 yaş arası minik yetenekler için derslerimizi oyunlarla ve eğlenceyle süslüyoruz!</p>
+                <p>Gitar, piyano ve bağlama eğitimlerinde çocukların sıkılmadan öğreneceği özel metotlar uyguluyoruz.</p>
+            </div>
+        </section>
+      <section class="content-layout">
+          <div class="main-content">
+                <h2>🧑‍🏫 Öğretmen Kadromuz</h2>
+                <p>Müşteri dosyasındaki aktif eğitmen listemiz ve uzmanlık alanları:</p>
+                
+                <div class="teacher-list">
+                    <div class="teacher-item">
+                        <strong>Zeynep Arıcı</strong> - Piyano (15 Yıl Deneyim)
+                    </div>
+                    <div class="teacher-item">
+                        <strong>Can Polat</strong> - Gitar (Konservatuvar Mezunu)
+                    </div>
+                    <div class="teacher-item">
+                        <strong>Hasan Er</strong> - Bağlama (THM Sanatçısı)
+                    </div>
+                    <p style="color: #666; font-style: italic;">+2 Eğitmen kadrosu daha sonra eklenecektir.</p>
+                </div>
+            </div>
+          <div class="sidebar">
+                <h2>📝 Ön Kayıt Formu</h2>
+                <form onsubmit="event.preventDefault(); alert('Kayıt taslağı alındı!');">
+                    <div class="form-group">
+                        <label for="child-age">Çocuğun Yaşı:</label>
+                        <input type="number" id="child-age" placeholder="Örn: 8" required min="7" max="14">
+                    </div>
+                    <div class="form-group">
+                        <label for="instrument">İstenen Enstrüman:</label>
+                        <select id="instrument" required>
+                            <option value="">Seçiniz...</option>
+                            <option value="piyano">Piyano</option>
+                            <option value="gitar">Gitar</option>
+                            <option value="baglama">Bağlama</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="parent-phone">Velinin Telefon Numarası:</label>
+                        <input type="tel" id="parent-phone" placeholder="05xx xxx xx xx" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Ön Kayıt Başvurusu Yap</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
