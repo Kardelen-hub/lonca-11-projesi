@@ -1,94 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Nota Müzik Kursu - Hafta 1 İskelet</title>
-    <style>
-            <style> 
-        body { display: flex; flex-direction: column; font-family: sans-serif; margin: 5px; }
-        header { border: 2px solid black; padding: 10px; display: flex; justify-content: space-between; }
-        .hero { border: 2px solid blue; padding: 20px; text-align: center; }
-        .main-layout { display: flex; }
-        .cards-container { display: flex; flex-direction: column; flex: 2; }
-        .card { border: 2px solid orange; padding: 10px; margin-bottom: 10px; }
-        .content-area { border: 2px solid green; padding: 10px; flex: 2; }
-        .sidebar { border: 2px solid purple; padding: 10px; flex: 1; }
-        footer { border: 2px solid red; padding: 10px; text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nota Müzik Kursu - çocuklar ve yetişkinler için müzik eğitimleri.">
+  <title>Nota Müzik Kursu | Müziğe İlk Adımın</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">🎵 Nota Müzik Kursu</div>
-        <nav>
-            <ul>
-                <li><a href="#">Ana Sayfa</a></li>
-                <li><a href="#">Kurslarımız</a></li>
-                <li><a href="#">Öğretmenlerimiz</a></li>
-            </ul>
-        </nav>
-    </header>
-     <section class="hero">
-        <h1>Eğlenceli ve Güvenli Müzik Akademisi</h1>
-        <p>7-14 yaş arası çocuklarımız için eğlenceli dersler, velilerimiz için güven veren şeffaf eğitim programları.</p>
+  <header class="site-header">
+    <a class="brand" href="#anasayfa" aria-label="Nota Müzik Kursu ana sayfa">
+      <span class="brand-mark">♪</span>
+      <span>NOTA <small>MÜZİK KURSU</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#egitimler">Çocuk Eğitimleri</a>
+      <a href="#veliler">Veliler için</a>
+      <a href="#ogretmenler">Öğretmenler</a>
+      <a href="#ucretler">Ücretler</a>
+      <a class="nav-cta" href="#kayit">Kayıt ol</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="hero-copy">
+        <p class="eyebrow">HER YAŞTA, HER NOTADA</p>
+        <h1>Müziğin ritmini<br><em>birlikte</em> keşfedelim.</h1>
+        <p class="hero-text">7–14 yaş arası çocukların müzikle tanıştığı, enstrüman becerilerini geliştirdiği keyifli bir öğrenme ortamı.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#kayit">Kursa başvur <span>↗</span></a>
+          <a class="text-link" href="#egitimler">Eğitimleri keşfet</a>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span> Çocuklar ve yetişkinler için müzik eğitimi</div>
+      </div>
+      <div class="hero-art" aria-label="Müzik temalı dekoratif alan">
+        <div class="sun-disc"></div>
+        <div class="music-card card-one"><span>♫</span><small>RİTİM</small></div>
+        <div class="music-card card-two"><span>♪</span><small>MELODİ</small></div>
+        <div class="music-staff">♪ &nbsp; ♫ &nbsp; ♪</div>
+        <div class="hero-caption">Her nota<br>bir başlangıç.</div>
+      </div>
     </section>
-    <main>
-        <section class="cards-section">
-            <div class="card">
-                <h2>👥 Veliler İçin Program & Ücret Bilgisi</h2>
-                <p>Şeffaf eğitim programlarımız ve bütçenize uygun ders seçeneklerimiz.</p>
-                <ul class="price-list">
-                    <li><strong>Bireysel Ders (45 dk):</strong> Aylık 4 ders 2.400 TL</li>
-                    <li><strong>Grup Dersleri (4 Kişi):</strong> Aylık 4 ders 1.400 TL</li>
-                </ul>
-            </div>
-            <div class="card kids">
-                <h2>🎨 Çocuklar İçin Eğlence Dünyası</h2>
-                <p>7-14 yaş arası minik yetenekler için derslerimizi oyunlarla ve eğlenceyle süslüyoruz!</p>
-                <p>Gitar, piyano ve bağlama eğitimlerinde çocukların sıkılmadan öğreneceği özel metotlar uyguluyoruz.</p>
-            </div>
-        </section>
-      <section class="content-layout">
-          <div class="main-content">
-                <h2>🧑‍🏫 Öğretmen Kadromuz</h2>
-                <p>Müşteri dosyasındaki aktif eğitmen listemiz ve uzmanlık alanları:</p>
-                
-                <div class="teacher-list">
-                    <div class="teacher-item">
-                        <strong>Zeynep Arıcı</strong> - Piyano (15 Yıl Deneyim)
-                    </div>
-                    <div class="teacher-item">
-                        <strong>Can Polat</strong> - Gitar (Konservatuvar Mezunu)
-                    </div>
-                    <div class="teacher-item">
-                        <strong>Hasan Er</strong> - Bağlama (THM Sanatçısı)
-                    </div>
-                    <p style="color: #666; font-style: italic;">+2 Eğitmen kadrosu daha sonra eklenecektir.</p>
-                </div>
-            </div>
-          <div class="sidebar">
-                <h2>📝 Ön Kayıt Formu</h2>
-                <form onsubmit="event.preventDefault(); alert('Kayıt taslağı alındı!');">
-                    <div class="form-group">
-                        <label for="child-age">Çocuğun Yaşı:</label>
-                        <input type="number" id="child-age" placeholder="Örn: 8" required min="7" max="14">
-                    </div>
-                    <div class="form-group">
-                        <label for="instrument">İstenen Enstrüman:</label>
-                        <select id="instrument" required>
-                            <option value="">Seçiniz...</option>
-                            <option value="piyano">Piyano</option>
-                            <option value="gitar">Gitar</option>
-                            <option value="baglama">Bağlama</option>
-                        </select>
-                    </div>
-                     <div class="form-group">
-                        <label for="parent-phone">Velinin Telefon Numarası:</label>
-                        <input type="tel" id="parent-phone" placeholder="05xx xxx xx xx" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Ön Kayıt Başvurusu Yap</button>
-                </form>
-            </div>
-        </section>
-    </main>
+
+    <section class="intro section" id="hakkimizda">
+      <div class="section-heading">
+        <p class="eyebrow">NOTA'YI TANIYIN</p>
+        <h2>Müziğe yer açın.</h2>
+      </div>
+      <div class="intro-copy">
+        Nota Müzik Kursu; 7–14 yaş arası çocuklara gitar, piyano ve bağlama dersleri sunan bir eğitim ortamıdır.</p>
+        <p>Amacımız, çocukların müziği keşfederken ilgi alanlarını geliştirmelerine ve güvenli, destekleyici bir ortamda öğrenmelerine yardımcı olmaktır.</p>
+        <div class="director"><span class="director-icon">♬</span><span><strong>Zeynep Arıcı</strong><small>Kurs müdürü ve piyano öğretmeni</small></span></div>
+      </div>
+    </section>
+
+    <section class="courses section" id="egitimler">
+      <div class="section-top">
+        <div><p class="eyebrow">EĞİTİM PROGRAMLARI</p><h2>Çocuklar için yeni bir melodi.</h2></div>
+        <p class="section-description">7–14 yaş arası öğrenciler için enstrüman eğitimleri.</p>
+      </div>
+      <div class="course-grid">
+        <article class="course-card kids course-wide">
+          <div class="course-icon">✦</div><p class="course-tag">7–14 YAŞ</p>
+          <h3>Çocuklar için<br>müzik atölyesi</h3>
+          <p>Renkli, eğlenceli ve keşif odaklı derslerle çocuklar piyano, gitar veya bağlama öğrenebilir.</p>
+          <a href="#kayit">Çocuk programına başvur <span>↗</span></a>
+          <div class="course-decoration">♫</div>
+        </article>
+      </div>
+      <div class="instrument-strip"><span>PIYANO</span><i></i><span>GİTAR</span><i></i><span>BAĞLAMA</span></div>
+    </section>
+
+    <section class="parents section" id="veliler">
+      <div class="parents-copy">
+        <p class="eyebrow">VELİLERİMİZ İÇİN</p>
+        <h2>Çocuğunuzun müzik yolculuğunda yanınızdayız.</h2>
+        <p>Bu bölüm, kursumuza kayıt yaptıracak çocukların velileri için hazırlandı. Ders seçimi, program ve ücret bilgilerini inceleyebilir; ön kayıt formunda iletişim bilgilerinizi paylaşabilirsiniz.</p>
+      </div>
+      <div class="parent-points">
+        <div><span>01</span><p><strong>Bilgilendirme</strong><small>Dersler ve program hakkında açık bilgi.</small></p></div>
+        <div><span>02</span><p><strong>İletişim</strong><small>Ön kayıt sırasında veli telefon numarası alınır.</small></p></div>
+        <div><span>03</span><p><strong>Takip</strong><small>Çocuğunuzun eğitim süreciyle ilgili iletişim.</small></p></div>
+      </div>
+    </section>
+
+    <section class="teachers section" id="ogretmenler">
+      <div class="section-top">
+        <div><p class="eyebrow">EĞİTMEN KADROMUZ</p><h2>Her notada rehberiniz.</h2></div>
+        <p class="section-description">Deneyimlerini ve müzik sevgilerini çocuklarla paylaşan eğitmenlerimiz.</p>
+      </div>
+      <div class="teacher-grid">
+        <article class="teacher-card"><div class="teacher-avatar avatar-piano">♬</div><div><span class="teacher-instrument">PİYANO</span><h3>Zeynep Arıcı</h3><p>15 yıl deneyim</p></div></article>
+        <article class="teacher-card"><div class="teacher-avatar avatar-guitar">♫</div><div><span class="teacher-instrument">GİTAR</span><h3>Can Polat</h3><p>Konservatuvar mezunu</p></div></article>
+        <article class="teacher-card"><div class="teacher-avatar avatar-baglama">♪</div><div><span class="teacher-instrument">BAĞLAMA</span><h3>Hasan Er</h3><p>THM sanatçısı</p></div></article>
+      </div>
+      <p class="small-note"></p>
+    </section>
+
+    <section class="pricing section" id="ucretler">
+      <div class="section-top">
+        <div><p class="eyebrow">DERS ÜCRETLERİ</p><h2>Planını seç, başla.</h2></div>
+        <p class="section-description"></p>
+      </div>
+      <div class="price-grid">
+        <article class="price-card"><p class="price-label">BİREYSEL DERS</p><h3>2.400 TL</h3><p class="price-detail">Aylık · 4 ders · 45 dakika</p><a href="#kayit">Başvuru yap <span>↗</span></a></article>
+        <article class="price-card price-featured"><p class="price-label">GRUP DERSİ</p><h3>1.400 TL</h3><p class="price-detail">Aylık · 4 kişilik grup</p><a href="#kayit">Başvuru yap <span>↗</span></a></article>
+      </div>
+      <p class="small-note"></p>
+    </section>
+
+    <section class="registration section" id="kayit">
+      <div class="registration-copy">
+        <p class="eyebrow">ÇOCUĞUNUZ İÇİN İLK ADIM</p>
+        <h2>Müzik yolculuğun<br>burada başlasın.</h2>
+        <p>Çocuğunuzun bilgilerini ve tercih ettiği enstrümanı girin. İletişim için veli telefon numarası gereklidir.</p>
+        <div class="registration-note">♪ &nbsp; Bir enstrüman, yeni bir hikâye.</div>
+      </div>
+      <form class="register-form" id="registrationForm">
+        <div class="form-heading"><h3>Ön kayıt formu</h3><p>Yıldızlı alanlar zorunludur.</p></div>
+        <label for="studentName">Öğrencinin adı soyadı *</label>
+        <input id="studentName" name="studentName" type="text" placeholder="Adınız ve soyadınız" required>
+        <div class="form-row">
+          <div><label for="age">Yaş *</label><input id="age" name="age" type="number" min="1" max="99" placeholder="Yaş" required></div>
+          <div><label for="instrument">Enstrüman *</label><select id="instrument" name="instrument" required><option value="">Seçiniz</option><option>Piyano</option><option>Gitar</option><option>Bağlama</option></select></div>
+        </div>
+        <label for="phone">Velinin telefon numarası *</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="05XX XXX XX XX" required>
+        <label for="lessonType">Ders tercihi</label>
+        <select id="lessonType" name="lessonType"><option>Bireysel ders</option><option>Grup dersi</option></select>
+        <button class="button button-primary form-submit" type="submit">Ön kayıt talebi gönder <span>↗</span></button>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        <p class="privacy-note"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#anasayfa"><span class="brand-mark">♪</span><span>NOTA <small>MÜZİK KURSU</small></span></a>
+    <p>Müziğin ritmini birlikte keşfedelim.</p>
+    <a href="#anasayfa">Yukarı dön ↑</a>
+    <small>© 2026 Nota Müzik Kursu · Öğrenci projesi taslağı</small>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
